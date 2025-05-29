@@ -1,0 +1,60 @@
+/* Styles pour l'interface d'administration */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.admin-nav {
+    background: #2c3e50;
+    padding: 1rem;
+}
+
+.admin-nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.admin-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: black; /* Changed from white to black for better readability */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn.danger {
+    background: #e74c3c;
+    color: black; /* Changed from white to black for better readability */
+}

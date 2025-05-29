@@ -1,0 +1,13 @@
+parameters:
+    level: 8
+    paths:
+        - app
+        - tests
+    ignoreErrors:
+        - '#Call to an undefined method#'
+        - '#Access to an undefined property#'
+    excludes_analyse:
+        - */vendor/*
+        - */storage/*
+        - */node_modules/*
+    checkMissingIterableValueType: false
