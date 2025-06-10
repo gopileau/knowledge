@@ -1,0 +1,60 @@
+Table users {
+  id int [pk, increment]
+  name varchar
+  email varchar [unique]
+  password varchar
+  role varchar
+  is_activated boolean
+  activation_token varchar
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table themes {
+  id int [pk, increment]
+  title varchar
+}
+
+Table cursus {
+  id int [pk, increment]
+  title varchar
+  theme_id int [ref: > themes.id]
+  price decimal
+}
+
+Table lessons {
+  id int [pk, increment]
+  title varchar
+  cursus_id int [ref: > cursus.id]
+  price decimal
+  video_url varchar
+  content text
+}
+
+Table orders {
+  id int [pk, increment]
+  user_id int [ref: > users.id]
+  total_price decimal
+  created_at timestamp
+}
+
+Table order_items {
+  id int [pk, increment]
+  order_id int [ref: > orders.id]
+  lesson_id int [ref: > lessons.id, null]
+  cursus_id int [ref: > cursus.id, null]
+}
+
+Table validations {
+  id int [pk, increment]
+  user_id int [ref: > users.id]
+  lesson_id int [ref: > lessons.id]
+  validated_at timestamp
+}
+
+Table certifications {
+  id int [pk, increment]
+  user_id int [ref: > users.id]
+  cursus_id int [ref: > cursus.id]
+  date_obtained timestamp
+}
