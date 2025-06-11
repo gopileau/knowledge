@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__.'/../../includes/auth.php';
 
-// Vérifier les permissions
+// Check permissions
 if (!hasRole('admin')) {
     header('Location: /auth/login.php');
     exit;
 }
 
-// Titre de la page
+// Page Title
 $title = "Gestion des Utilisateurs";
 include __DIR__.'/../layout/header.php';
 
