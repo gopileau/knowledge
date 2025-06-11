@@ -1,7 +1,7 @@
 <?php require_once __DIR__.'/layout/header.php'; ?>
 
 <?php
-// Si le panier est vide
+// If the cart is empty
 if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])):
 ?>
     <h2>Votre panier est vide.</h2>
@@ -43,10 +43,10 @@ else:
     
     <h3>Total : <?= number_format($total, 2) ?> €</h3>
 
-    <!-- Bouton pour vider le panier -->
+    <!-- Button to empty the basket -->
     <a href="/cart/clear">Vider le panier</a>
     
-    <!-- Bouton pour procéder à la commande -->
+    <!-- Button to proceed with the order-->
     <a href="/checkout">Passer à la caisse</a>
 <?php endif; ?>
 
