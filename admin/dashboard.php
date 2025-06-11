@@ -3,7 +3,7 @@ session_start();
 require_once '../includes/auth.php';
 require_once '../includes/db.php';
 
-// Vérifie que l'utilisateur est admin
+// Check that the user is admin
 if (!isAdmin()) {
     header('Location: ../auth/login.php');
     exit;
